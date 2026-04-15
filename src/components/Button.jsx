@@ -1,9 +1,15 @@
 import React from "react";
 
-const Button = ({ title }) => {
+const MyButton = ({ title, onClick, className = "", type = "button" }) => {
   return (
-    <div className="bg-blue-800 text-white py-2 px-4 rounded">{title}</div>
+    <button
+      type={type}
+      onClick={onClick}
+      className={`px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 cursor-pointer ${className}`}
+    >
+      {title}
+    </button>
   );
 };
 
-export default Button;
+export default MyButton;
